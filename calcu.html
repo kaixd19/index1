@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
+        input { margin: 5px; }
+        button { margin: 5px; }
+    </style>
+</head>
+<body>
+
+    <h1>Simple Calculator</h1>
+    <input type="text" id="expression" placeholder="Enter calculation (e.g., 2 + 2)">
+    <button onclick="calculate()">Calculate</button>
+    <p id="result"></p>
+
+    <script>
+        function calculate() {
+            const input = document.getElementById('expression').value;
+            let result;
+            try {
+                result = eval(input);
+                document.getElementById('result').innerText = `The result is: ${result}`;
+            } catch (e) {
+                document.getElementById('result').innerText = "Error: Invalid input!";
+            }
+            document.getElementById('result').innerText += "\nI miss you, baby :(";
+        }
+    </script>
+
+</body>
+</html>
